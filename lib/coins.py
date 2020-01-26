@@ -1071,3 +1071,23 @@ class CanadaeCoin(AuxPowMixin, Coin):
     IRC_CHANNEL="#electrum-cdn"
     RPC_PORT = 34330
     REORG_LIMIT = 1000
+
+class UraniumX(Coin):
+    NAME = "UraniumX"
+    SHORTNAME = "URX"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    P2PKH_VERBYTE = bytes.fromhex("44")
+    P2SH_VERBYTES = [bytes.fromhex("73")]
+    WIF_BYTE = bytes.fromhex("0c")
+    GENESIS_HASH = ('6be1ade2619d1402571996e436b726c8'
+                    'b0bd72f10fdcae10cff5acd369118626')
+    DESERIALIZER = DeserializerSegWit
+    ESTIMATE_FEE = 0.0001
+    RELAY_FEE = 0.0001
+    TX_COUNT = 1
+    TX_COUNT_HEIGHT = 1
+    TX_PER_BLOCK = 1
+    RPC_PORT = 8234
+    REORG_LIMIT = 1000
